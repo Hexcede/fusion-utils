@@ -9,4 +9,5 @@ return {
 	Unwrap = require(script.Unwrap);
 	With = require(script.With);
 	WithItems = require(script.WithItems);
+	Without = require(script.Without);
 }
