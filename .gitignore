@@ -1,0 +1,14 @@
+# Project place file
+/fusion-utils.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Rojo files
+/sourcemap.json
+
+# Wally files
+/wally.lock
+Packages/
+DevPackages/
