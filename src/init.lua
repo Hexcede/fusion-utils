@@ -10,5 +10,6 @@ return {
 	With = require(script.With);
 	WithItems = require(script.WithItems);
 	Without = require(script.Without);
+	SharedProperty = require(script.SharedProperty);
 	Bound = require(script.Bound);
 }
