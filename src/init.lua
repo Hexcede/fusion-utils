@@ -8,4 +8,5 @@ return {
 	ObserveSignal = require(script.ObserveSignal);
 	Unwrap = require(script.Unwrap);
 	With = require(script.With);
+	WithItems = require(script.WithItems);
 }
