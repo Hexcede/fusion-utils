@@ -5,4 +5,5 @@ return {
 	Child = require(script.Child);
 	Defer = require(script.Defer);
 	Observe = require(script.Observe);
+	ObserveSignal = require(script.ObserveSignal);
 }
