@@ -2,6 +2,7 @@ local Fusion = require(script.Parent.Parent.Fusion)
 
 local Value = Fusion.Value
 local Hydrate = Fusion.Hydrate
+local Cleanup = Fusion.Cleanup
 
 local ChildWhichRef = require(script.Parent.ChildRef)
 local Observe = require(script.Parent.Observe)
@@ -19,8 +20,19 @@ local ChildWhich = {
 
 		local isHydrated = {}
 		local result = Observe(childRef, function(child)
+			if not child then return end
 			if isHydrated[child] then return end
 			isHydrated[child] = Hydrate(child)(value)
+
+			-- Bind to child
+			Hydrate(child)(value)
+
+			-- Bind to cleanup of child
+			Hydrate(child) {
+				[Cleanup] = function()
+					isHydrated[child] = nil
+				end;
+			}
 		end, Fusion.doNothing)
 
 		table.insert(cleanupTasks, result)
