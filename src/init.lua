@@ -13,4 +13,6 @@ return {
 	WithItems = require(script.WithItems);
 	Without = require(script.Without);
 	Bound = require(script.Bound);
+
+	Conditions = require(script.Conditions);
 }
