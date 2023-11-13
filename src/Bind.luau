@@ -1,4 +1,4 @@
-local function Bound(callback, ...)
+local function Bind(callback, ...)
 	local bound = table.pack(...)
 	return function(...)
 		local extra = table.pack(...)
@@ -6,4 +6,4 @@ local function Bound(callback, ...)
 	end
 end
 
-return Bound
+return Bind
