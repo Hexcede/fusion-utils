@@ -1,10 +1,10 @@
-local Unwrap = require(script.Parent.Unwrap)
+local unwrap = require(script.Parent.unwrap)
 
 local function Without(source)
 	return function(with)
-		local destination = table.clone(Unwrap(source))
+		local destination = table.clone(unwrap(source))
 		if type(with) == "table" then
-			for _, index in ipairs(Unwrap(with)) do
+			for _, index in ipairs(unwrap(with)) do
 				destination[index] = nil
 			end
 		end

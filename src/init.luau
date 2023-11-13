@@ -6,7 +6,7 @@ return {
 	Defer = require(script.Defer);
 	Observe = require(script.Observe);
 	ObserveSignal = require(script.ObserveSignal);
-	Unwrap = require(script.Unwrap);
+	unwrap = require(script.unwrap);
 	map = require(script.map);
 	With = require(script.With);
 	WithItems = require(script.WithItems);

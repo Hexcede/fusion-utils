@@ -1,10 +1,10 @@
-local Unwrap = require(script.Parent.Unwrap)
+local unwrap = require(script.Parent.unwrap)
 
 local function With(source)
 	return function(with)
-		local destination = table.clone(Unwrap(source))
+		local destination = table.clone(unwrap(source))
 		if type(with) == "table" then
-			for index, value in pairs(Unwrap(with)) do
+			for index, value in pairs(unwrap(with)) do
 				destination[index] = value
 			end
 		end
