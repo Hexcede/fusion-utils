@@ -7,6 +7,7 @@ return {
 	Observe = require(script.Observe);
 	ObserveSignal = require(script.ObserveSignal);
 	Unwrap = require(script.Unwrap);
+	map = require(script.map);
 	With = require(script.With);
 	WithItems = require(script.WithItems);
 	Without = require(script.Without);
