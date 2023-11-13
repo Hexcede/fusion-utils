@@ -3,7 +3,7 @@ return {
 	AttributeOut = require(script.AttributeOut);
 	ChildRef = require(script.ChildRef);
 	Child = require(script.Child);
-	Defer = require(script.Defer);
+	defer = require(script.defer);
 	Observe = require(script.Observe);
 	ObserveSignal = require(script.ObserveSignal);
 	unwrap = require(script.unwrap);

@@ -1,7 +1,7 @@
 local Fusion = require(script.Parent.Parent.Fusion)
 local Observer = Fusion.Observer
 
-local Defer = require(script.Parent.Defer)
+local defer = require(script.Parent.defer)
 
 local function Observe<T, Args...>(stateObject: Fusion.StateObject<T>, callback: (value: T, Args...) -> ...any, ...)
 	local extraArguments = table.pack(...)
@@ -9,7 +9,7 @@ local function Observe<T, Args...>(stateObject: Fusion.StateObject<T>, callback:
 		callback(stateObject:get(), table.unpack(extraArguments, 1, extraArguments.n))
 	end
 
-	return Observer(stateObject):onChange(Defer(handleChange))
+	return Observer(stateObject):onChange(defer(handleChange))
 end
 
 return Observe

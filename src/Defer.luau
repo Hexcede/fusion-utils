@@ -1,6 +1,6 @@
-local function Defer(callback, ...)
+local function defer(callback, ...)
 	task.defer(callback, ...)
 	return callback
 end
 
-return Defer
+return defer

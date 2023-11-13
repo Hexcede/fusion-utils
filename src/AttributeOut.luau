@@ -1,4 +1,4 @@
-local Defer = require(script.Parent.Defer)
+local defer = require(script.Parent.defer)
 
 local AttributeOut = {
 	type = "SpecialKey";
@@ -7,7 +7,7 @@ local AttributeOut = {
 
 	apply = function(self, value, applyTo, cleanupTasks)
 		local attribute = self.attribute
-		table.insert(cleanupTasks, applyTo:GetAttributeChangedSignal(attribute):Connect(Defer(function()
+		table.insert(cleanupTasks, applyTo:GetAttributeChangedSignal(attribute):Connect(defer(function()
 			value:set(applyTo:GetAttribute(attribute))
 		end)))
 	end;
